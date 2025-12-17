@@ -1,0 +1,37 @@
+# Training Configuration
+
+# Optimizer settings
+optimizer: Adam
+learning_rate: 0.0001  # 1e-4
+
+# Training settings
+batch_size: 32
+max_epochs: 1000
+
+# Loss function
+loss: MSE  # Mean Squared Error for regression
+
+# Callbacks
+early_stopping:
+  patience: 20
+  monitor: val_loss
+  mode: min  # Stop when val_loss stops decreasing
+
+reduce_lr_on_plateau:
+  factor: 0.8
+  patience: 5
+  min_lr: 0.0001
+  monitor: val_loss
+  mode: min
+
+model_checkpoint:
+  monitor: val_loss
+  mode: min  # Save when val_loss decreases
+  save_best_only: true
+
+# Checkpoint settings
+checkpoint_dir: checkpoints
+
+# Logging
+log_dir: logs
+save_history: true  # Save training history to JSON

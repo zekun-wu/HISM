@@ -1,0 +1,8 @@
+# List of trial IDs for test set
+# One trial ID per line
+1_3_4
+1_12_13
+2_17_18
+3_7_8
+3_19_20
+4_18_19

@@ -1,0 +1,85 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+*.egg-info/
+dist/
+build/
+
+# PyTorch model checkpoints (large files, can be regenerated)
+*.pth
+*.pt
+checkpoints/
+
+# Logs and training outputs
+logs/
+*.log
+training_history.json
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Data files (uncomment if data is too large for GitHub)
+# Note: Keeping data structure but you can exclude large image files if needed
+# data/trials/**/*.png
+# data/trials/**/*.jpg
+
+# Keep CSV files in trials (they're small and important)
+# But exclude prediction CSVs if they're generated
+# data/trials/**/prediction*.csv
+
+# PDF files (if too large, uncomment)
+# *.pdf
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.cache
+
+# Environment variables
+.env
+.env.local
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+
+# pytest
+.pytest_cache/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+

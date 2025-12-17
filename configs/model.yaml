@@ -1,0 +1,29 @@
+# Model Configuration
+
+# Temporal Encoder Settings
+temporal_encoder:
+  type: transformer  # 'lstm' or 'transformer'
+  use_task_vector: false  # Use task vector c_t in temporal features (must match dataset.yaml)
+  
+  # Transformer settings
+  embed_dim: 64
+  num_heads: 8
+  num_layers: 2
+  ff_dim: 128
+  dropout: 0.1
+  max_seq_len: 100  # Maximum sequence length for positional encoding
+  
+  # LSTM settings
+  lstm_hidden_sizes: [256, 64, 8]
+  lstm_dropout: 0.2
+
+# Spatial Encoder Settings
+spatial_encoder:
+  freeze_backbone: true
+  unfreeze_last_n_layers: 20
+  pretrained: true
+
+# Fusion/NS Predictor Settings
+fusion:
+  hidden_dims: [512, 128]
+  dropout: 0.2

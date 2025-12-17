@@ -1,0 +1,26 @@
+# Dataset Configuration for HISM
+
+# Paths
+data_root: data/trials
+splits_dir: data/splits
+
+# File names
+csv_filename: saliency_summary.csv
+ui_image: global.png
+mask_image: mask.png
+
+# CSV column names
+target_column: normalized_saliency_smoothed
+highlight_column: Highlight
+task_column: Task
+
+# Feature selection
+use_task_vector: true  # If false, only use v_t (highlight vector). If true, use both v_t and c_t.
+
+# Image preprocessing
+image_size: [224, 224]  # [height, width] for ResNet50 compatibility
+normalize_images: true
+
+# ImageNet normalization stats (for UI images)
+imagenet_mean: [0.485, 0.456, 0.406]
+imagenet_std: [0.229, 0.224, 0.225]
